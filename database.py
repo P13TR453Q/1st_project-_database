@@ -35,13 +35,17 @@ while True:
  
 #Deleting data: 
   elif menu == "3":
-    y = input("Select an element: ")
+    c = len(Data_List)
+    if c == 0:
+      print("You have no data in your database")
+    else:
+      y = input("Select an element: ")
     for pack in Data_List:
       if y == pack.name:
         Data_List.remove(pack)
         print(f"Deleted {pack.name}.")
       elif y != pack.name:
-        print("there is no element named "+ {y})
+        print("there is no element named "+ y)
 
 #Saving process:
   else:
